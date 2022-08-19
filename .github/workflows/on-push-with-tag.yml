@@ -7,6 +7,10 @@ on:
 jobs:
   launches-release:
     runs-on: ubuntu-latest
+    env:
+        TAG_NAME: ${{github.ref_name}}
+        OAUTH_TOKEN: ${{secrets.OAUTH_TOKEN}}
+        AUTHOR: ${{github.actor}}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -15,3 +19,4 @@ jobs:
       - run: npm install
       - run: npm run lint
       - run: npm run build
+      - run: npm run launch-release
