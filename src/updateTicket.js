@@ -17,7 +17,7 @@ async function fetchToken() {
     console.log(ticket)
 }
 
-fetchToken();
+updateTicket();
 
 async function updateTicket() {
     const updateResponse = await fetch(url,{
