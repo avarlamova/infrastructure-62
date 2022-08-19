@@ -8,16 +8,16 @@ let headersList = {
     "Content-Type": "application/json"
 }
 //
-// async function fetchToken() {
-//     const response = await fetch(url,{
-//         method: "GET",
-//         headers: headersList
-//     })
-//     const ticket = await response.json()
-//     console.log(ticket)
-// }
+async function fetchToken() {
+    const response = await fetch(url,{
+        method: "GET",
+        headers: headersList
+    })
+    const ticket = await response.json()
+    console.log(ticket)
+}
 
-updateTicket();
+fetchToken();
 
 async function updateTicket() {
     const updateResponse = await fetch(url,{
