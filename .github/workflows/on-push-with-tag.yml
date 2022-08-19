@@ -10,7 +10,7 @@ jobs:
     env:
         TAG_NAME: ${{github.ref_name}}
         OAUTH_TOKEN: ${{secrets.OAUTH_TOKEN}}
-        AUTHOR: ${{github.actor}}
+#        AUTHOR: ${{github.actor}}
     steps:
 
       - uses: actions/checkout@v3
