@@ -1,0 +1,13 @@
+name: on push
+on: [push]
+jobs:
+  check-ts-and-linter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.16.0'
+      - run: npm install
+      - run: npm run lint
+      - run: npm run build
