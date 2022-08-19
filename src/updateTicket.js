@@ -1,6 +1,6 @@
 const fetch = require("node-fetch")
 const url = "https://api.tracker.yandex.net/v2/issues/INFRA-62"
-const {OAUTH_TOKEN,AUTHOR} = process.env
+const {OAUTH_TOKEN} = process.env
 // let OAUTH_TOKEN = 'y0_AgAAAABG_epAAAhWcgAAAADMpApoGD8sXOqJQKS1ZCEdxrI1mAVPDW0';
 let headersList = {
     "X-Org-ID": "7261414",
@@ -24,7 +24,7 @@ async function updateTicket() {
         method: "PATCH",
         headers: headersList,
         body: JSON.stringify({
-            "description": `Ответственный за релиз ${AUTHOR}`
+            "description": `Ответственный за релиз author`
         })
     })
 
