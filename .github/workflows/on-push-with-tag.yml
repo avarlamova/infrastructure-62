@@ -2,7 +2,7 @@ name: on push with tag
 on:
   push:
     tags:
-      - rc.0**
+      - "rc.0**"
 
 jobs:
   launches-release:
@@ -10,6 +10,7 @@ jobs:
     env:
         TAG_NAME: ${{github.ref_name}}
         OAUTH_TOKEN: ${{secrets.OAUTH_TOKEN}}
+        AUTHOR: ${{github.actor}}
     steps:
 
       - uses: actions/checkout@v3
