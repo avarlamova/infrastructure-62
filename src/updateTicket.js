@@ -14,18 +14,18 @@ async function fetchToken() {
         headers: headersList
     })
     const ticket = await response.json()
-    console.log(ticket)
+    // console.log(ticket)
 }
 
 updateTicket();
 
 async function updateTicket() {
     console.log(AUTHOR, TAG_NAME)
-    const updateResponse = await fetch(url,{
+    await fetch(url,{
         method: "PATCH",
         headers: headersList,
         body: JSON.stringify({
-            "description": `Ответственный за релиз author`
+            "description": `Ответственный за релиз ${AUTHOR}`
         })
     })
 
