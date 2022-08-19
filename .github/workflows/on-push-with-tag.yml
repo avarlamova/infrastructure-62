@@ -20,3 +20,4 @@ jobs:
       - run: npm run lint
       - run: npm run build
       - run: npm run launch-release
+      - run: echo "The author is ${{AUTHOR}}"

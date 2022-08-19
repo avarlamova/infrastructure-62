@@ -23,9 +23,9 @@ async function updateTicket() {
     const updateResponse = await fetch(url,{
         method: "PATCH",
         headers: headersList,
-        body: {
+        body: JSON.stringify({
             "description": `Ответственный за релиз ${AUTHOR}`
-        }
+        })
     })
 
 }
