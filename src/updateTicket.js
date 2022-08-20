@@ -21,7 +21,6 @@ updateTicket();
 async function updateTicket() {
     const formatter = new Intl.DateTimeFormat("ru");
     const currentDate = formatter.format(new Date())//.toLocaleDateString()
-
     console.log(AUTHOR, TAG_NAME, COMMITS, BEFORE, AFTER)
     await fetch(url,{
         method: "PATCH",
