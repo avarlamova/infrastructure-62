@@ -23,6 +23,5 @@ jobs:
       - run: npm run ts
       - run: |
           source ./src/test.sh
-        shell: bash
       - run: npm run launch-release
 

@@ -1,4 +1,4 @@
-#!/bin/bash -e {0}
+#!/bin/bash
 LOG="git log rc.0.0.5"
 export COMMITS=$(eval $LOG)
 #  echo $COMMITS
