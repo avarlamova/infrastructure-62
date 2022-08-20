@@ -1,3 +1,3 @@
 #!/bin/bash
-$LOG = 'git log'
-export COMMITS = $(eval $LOG)
+$LOG="$(git log)"
+export COMMITS=$(eval $LOG)
