@@ -1,8 +1,10 @@
 #!/bin/bash
-LOG="git log $TAG_NAME --pretty"
+LOG="git log $TAG_NAME --pretty=format:'%H %an %s'"
 export COMMITS=$(eval $LOG)
 echo "COMMITS<<EOF" >> $GITHUB_ENV
 echo "$COMMITS" >> $GITHUB_ENV
 echo "EOF" >> $GITHUB_ENV
 #echo "COMMITS=$(eval $LOG)" >> $GITHUB_ENV
 #  echo $COMMITS
+
+
