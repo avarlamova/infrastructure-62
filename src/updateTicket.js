@@ -1,7 +1,7 @@
-import COMMITS from './test.sh'
+// import COMMITS from './test.sh'
 const fetch = require("node-fetch")
 const url = "https://api.tracker.yandex.net/v2/issues/INFRA-62"
-const {OAUTH_TOKEN, TAG_NAME, AUTHOR} = process.env
+const {OAUTH_TOKEN, TAG_NAME, AUTHOR, COMMITS} = process.env
 let headersList = {
     "X-Org-ID": "7261414",
     "Authorization": `OAuth ${OAUTH_TOKEN}`,
@@ -16,8 +16,9 @@ async function fetchToken() {
     const ticket = await response.json()
     // console.log(ticket)
 }
+console.log(AUTHOR, TAG_NAME, COMMITS)
 
-updateTicket();
+// updateTicket();
 
 async function updateTicket() {
 

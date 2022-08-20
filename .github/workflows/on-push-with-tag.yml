@@ -27,5 +27,5 @@ jobs:
         shell: bash
       - run: npm install
       - run: npm run lint
-      - run: npm run build
+      - run: npm run ts
       - run: npm run launch-release
