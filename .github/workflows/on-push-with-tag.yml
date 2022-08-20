@@ -2,7 +2,7 @@ name: on push with tag
 on:
   push:
     tags:
-      - "rc.0**"
+      - "rc-0**"
 
 jobs:
   launches-release:
