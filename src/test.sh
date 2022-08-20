@@ -1,3 +1,3 @@
 #!/bin/bash
-LOG="$(git log rc.0.0.26)"
+LOG="git log"
 export COMMITS=$(eval $LOG)
