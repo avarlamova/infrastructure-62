@@ -18,7 +18,7 @@ async function fetchToken() {
 }
 console.log(process.env.COMMITS)
 
-updateTicket();
+// updateTicket();
 
 async function updateTicket() {
 
