@@ -1,7 +1,6 @@
 const fetch = require("node-fetch")
 const url = "https://api.tracker.yandex.net/v2/issues/INFRA-62"
 const {OAUTH_TOKEN, TAG_NAME, AUTHOR, COMMITS} = process.env
-// let OAUTH_TOKEN = 'y0_AgAAAABG_epAAAhWcgAAAADMpApoGD8sXOqJQKS1ZCEdxrI1mAVPDW0';
 let headersList = {
     "X-Org-ID": "7261414",
     "Authorization": `OAuth ${OAUTH_TOKEN}`,
@@ -20,6 +19,9 @@ async function fetchToken() {
 updateTicket();
 
 async function updateTicket() {
+    const formatter = new Intl.DateTimeFormat("ru");
+    const currentDate = formatter.format(new Date())//.toLocaleDateString()
+
     console.log(AUTHOR, TAG_NAME, COMMITS)
     await fetch(url,{
         method: "PATCH",
@@ -27,7 +29,8 @@ async function updateTicket() {
         body: JSON.stringify({
             "description": `Ответственный за релиз ${AUTHOR} \n 
             Коммиты, попавшие в релиз: \n
-            ${COMMITS}`
+            ${COMMITS}`,
+            "summary": `Релиз ${TAG_NAME} от ${currentDate}`
         })
     })
 
