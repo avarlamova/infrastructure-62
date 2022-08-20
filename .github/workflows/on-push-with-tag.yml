@@ -24,7 +24,7 @@ jobs:
           
           chmod +x ./src/test.sh
           ./src/test.sh
-          shell: bash
+        shell: bash
       - run: npm install
       - run: npm run lint
       - run: npm run build
