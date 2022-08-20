@@ -2,4 +2,4 @@
 LOG="git log"
 export COMMITS=$(eval $LOG)
       echo $COMMITS
-      echo "finished"
+      echo "${env.TAG_NAME}"

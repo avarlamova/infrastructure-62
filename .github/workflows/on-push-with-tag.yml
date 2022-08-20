@@ -21,6 +21,7 @@ jobs:
       - run: |
           source ./src/test.sh
         shell: bash
+      - run: echo "COMMITS=$(eval "git log")" >> $GITHUB_ENV
       - run: npm install
       - run: npm run lint
       - run: npm run ts
