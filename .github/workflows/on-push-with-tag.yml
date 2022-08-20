@@ -21,7 +21,8 @@ jobs:
         with:
           node-version: '16.16.0'
       - run: |
-          echo "flag=true" >> $GITHUB_ENV
+          var =$(git log)
+          echo "flag=$var" >> $GITHUB_ENV
       - run: npm install
       - run: npm run lint
       - run: npm run build
