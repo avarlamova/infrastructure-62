@@ -1,6 +1,6 @@
 const fetch = require("node-fetch")
 const url = "https://api.tracker.yandex.net/v2/issues/INFRA-62"
-const {OAUTH_TOKEN, TAG_NAME, AUTHOR, COMMITS, BEFORE, AFTER, flag} = process.env
+const {OAUTH_TOKEN, TAG_NAME, AUTHOR, COMMITS, BEFORE, AFTER, COMMITS} = process.env
 let headersList = {
     "X-Org-ID": "7261414",
     "Authorization": `OAuth ${OAUTH_TOKEN}`,
