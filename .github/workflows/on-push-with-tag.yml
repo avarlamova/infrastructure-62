@@ -20,7 +20,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16.16.0'
-      - run: export LOG = $(eval 'git log')
+      - run: |
+          echo "flag=true" >> $GITHUB_ENV
       - run: npm install
       - run: npm run lint
       - run: npm run build
