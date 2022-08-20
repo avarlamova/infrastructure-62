@@ -35,5 +35,4 @@ async function updateTicket() {
     })
 
 }
-
 // console.log(fetchToken())
