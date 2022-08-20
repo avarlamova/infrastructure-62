@@ -16,7 +16,7 @@ async function fetchToken() {
     const ticket = await response.json()
     // console.log(ticket)
 }
-// console.log(process.env)
+console.log(process.env.COMMITS)
 
 updateTicket();
 
