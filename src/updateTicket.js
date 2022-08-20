@@ -1,6 +1,6 @@
+import COMMITS from './test.sh'
 const fetch = require("node-fetch")
 const url = "https://api.tracker.yandex.net/v2/issues/INFRA-62"
-import COMMITS from './test.sh'
 const {OAUTH_TOKEN, TAG_NAME, AUTHOR} = process.env
 let headersList = {
     "X-Org-ID": "7261414",
