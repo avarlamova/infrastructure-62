@@ -1,5 +1,5 @@
 #!/bin/bash
-LOG="git log rc.0.0.5"
+LOG="git log $TAG_NAME"
 export COMMITS=$(eval $LOG)
 echo "COMMITS<<EOF" >> $GITHUB_ENV
 echo "$COMMITS" >> $GITHUB_ENV
