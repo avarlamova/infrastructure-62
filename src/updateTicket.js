@@ -35,8 +35,6 @@ async function updateTicket() {
             "summary": `Релиз ${TAG_NAME} от ${currentDate}`
         })
     })
-    console.log(gitLog)
-
 }
 // console.log(fetchToken())
 
