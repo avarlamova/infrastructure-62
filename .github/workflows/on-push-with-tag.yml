@@ -21,8 +21,10 @@ jobs:
         with:
           node-version: '16.16.0'
       - run: |
-          var =$(git log)
-          echo "flag=$var" >> $GITHUB_ENV
+          
+          chmod +x ./src/test.sh
+          ./src/test.sh
+          shell: bash
       - run: npm install
       - run: npm run lint
       - run: npm run build
