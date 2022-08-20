@@ -1,6 +1,7 @@
 const fetch = require("node-fetch")
 const url = "https://api.tracker.yandex.net/v2/issues/INFRA-62"
-const {OAUTH_TOKEN, TAG_NAME, AUTHOR, COMMITS, BEFORE, AFTER, COMMITS} = process.env
+import COMMITS from './test.sh'
+const {OAUTH_TOKEN, TAG_NAME, AUTHOR} = process.env
 let headersList = {
     "X-Org-ID": "7261414",
     "Authorization": `OAuth ${OAUTH_TOKEN}`,
@@ -24,7 +25,7 @@ async function updateTicket() {
 
     const formatter = new Intl.DateTimeFormat("ru");
     const currentDate = formatter.format(new Date())//.toLocaleDateString()
-    console.log(AUTHOR, TAG_NAME, COMMITS, BEFORE, AFTER, flag)
+    console.log(AUTHOR, TAG_NAME, COMMITS)
     await fetch(url,{
         method: "PATCH",
         headers: headersList,
