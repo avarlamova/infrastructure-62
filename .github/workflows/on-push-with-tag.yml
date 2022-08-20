@@ -24,5 +24,6 @@ jobs:
       - run: npm run ts
       - run: |
           source ./src/test.sh
+      - run: echo $COMMITS
       - run: npm run launch-release
 
