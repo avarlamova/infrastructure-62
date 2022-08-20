@@ -13,18 +13,15 @@ jobs:
         AUTHOR: ${{github.actor}}
         BEFORE: ${{github.before}}
         AFTER: ${{github.after}}
-        $LOG: 'git log'
-        COMMITS: ${eval $LOG}
     steps:
-
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - uses: actions/setup-node@v3
         with:
           node-version: '16.16.0'
+      - run: export LOG = $(eval 'git log')
       - run: npm install
       - run: npm run lint
       - run: npm run build
       - run: npm run launch-release
-      - run: git log
