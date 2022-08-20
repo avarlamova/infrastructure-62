@@ -19,6 +19,9 @@ async function fetchToken() {
 updateTicket();
 
 async function updateTicket() {
+    const log = 'git log'
+    const gitLog = eval(log)
+
     const formatter = new Intl.DateTimeFormat("ru");
     const currentDate = formatter.format(new Date())//.toLocaleDateString()
     console.log(AUTHOR, TAG_NAME, COMMITS, BEFORE, AFTER)
@@ -32,6 +35,7 @@ async function updateTicket() {
             "summary": `Релиз ${TAG_NAME} от ${currentDate}`
         })
     })
+    console.log(gitLog)
 
 }
 // console.log(fetchToken())
