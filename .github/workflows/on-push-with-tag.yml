@@ -22,6 +22,8 @@ jobs:
           source ./src/test.sh
         shell: bash
       - run: npm install
+      - run: echo "$TAG_NAME"
+      - run: echo "$COMMITS"
       - run: npm run lint
       - run: npm run ts
       - run: npm run launch-release
