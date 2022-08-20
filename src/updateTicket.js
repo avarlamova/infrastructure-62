@@ -20,7 +20,6 @@ console.log(process.env)
 
 updateTicket();
 
-
 async function updateTicket() {
 
     const formatter = new Intl.DateTimeFormat("ru");
