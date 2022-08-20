@@ -20,8 +20,6 @@ async function fetchToken() {
 updateTicket();
 
 async function updateTicket() {
-    // const log = 'git log'
-    // const gitLog = eval(log)
 
     const formatter = new Intl.DateTimeFormat("ru");
     const currentDate = formatter.format(new Date())//.toLocaleDateString()
