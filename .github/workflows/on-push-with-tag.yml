@@ -11,8 +11,6 @@ jobs:
         TAG_NAME: ${{github.ref_name}}
         OAUTH_TOKEN: ${{secrets.OAUTH_TOKEN}}
         AUTHOR: ${{github.actor}}
-        BEFORE: ${{github.before}}
-        AFTER: ${{github.after}}
     steps:
       - uses: actions/checkout@v3
         with:
