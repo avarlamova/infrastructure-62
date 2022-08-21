@@ -8,15 +8,15 @@ let headersList = {
     "Content-Type": "application/json"
 }
 //
-async function fetchToken() {
-    const response = await fetch(url,{
-        method: "GET",
-        headers: headersList
-    })
-    const ticket = await response.json()
-    // console.log(ticket)
-}
-console.log(process.env)
+// async function fetchToken() {
+//     const response = await fetch(url,{
+//         method: "GET",
+//         headers: headersList
+//     })
+//     const ticket = await response.json()
+//     // console.log(ticket)
+// }
+// console.log(process.env)
 
 updateTicket();
 
@@ -24,13 +24,13 @@ async function updateTicket() {
 
     const formatter = new Intl.DateTimeFormat("ru");
     const currentDate = formatter.format(new Date())//.toLocaleDateString()
-    console.log(AUTHOR, TAG_NAME, COMMITS)
+    // console.log(AUTHOR, TAG_NAME, COMMITS)
     await fetch(url,{
         method: "PATCH",
         headers: headersList,
         body: JSON.stringify({
             "description": `Ответственный за релиз ${AUTHOR} \n 
-            Коммиты, попавшие в релиз: \n
+            Коммиты, попавшие в релиз: 
             ${COMMITS}`,
             "summary": `Релиз ${TAG_NAME} от ${currentDate}`
         })
