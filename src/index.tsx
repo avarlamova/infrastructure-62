@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
-    // const unusedElement = '';
+    const unusedElement = '';
   document.getElementById('root') //as HTMLElement
 );
 root.render(
