@@ -11,7 +11,7 @@ const commentText = `Собран образ с тэгом ${TAG_NAME}`
 async function addComment() {
 
     await fetch(url,{
-        method: "PATCH",
+        method: "POST",
         headers: headersList,
         body: JSON.stringify({
             "text": commentText

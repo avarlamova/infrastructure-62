@@ -1,5 +1,5 @@
 #!/bin/bash
-LOG="git log --pretty=format:'%H %an %s'\n"
+LOG="git log --pretty=format:'%H %an %s'"
 LAST_TAG=$(git describe --abbrev=0 --match 'rc-0.*' --exclude $TAG_NAME)
 echo $LAST_TAG
 if [ $LAST_TAG != '' ]
