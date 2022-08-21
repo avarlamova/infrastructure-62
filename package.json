@@ -24,7 +24,8 @@
     "ts": "./node_modules/.bin/tsc",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "launch-release": "node ./src/updateTicket.js"
+    "launch-release": "node ./src/updateTicket.js",
+    "add-release-comment": "node ./src/addComment.js"
   },
   "eslintConfig": {
     "extends": [
