@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
     // const unusedElement = '';
-  document.getElementById('root') as HTMLElement
+  document.getElementById('root') //as HTMLElement
 );
 root.render(
   <React.StrictMode>
