@@ -4,7 +4,8 @@ on: ['push']
 #    tags-ignore:
 #      - '**'
 jobs:
-  check-ts-and-linter:
+  on-push:
+    name: check-ts-and-linter
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -15,7 +16,9 @@ jobs:
       - run: npm run lint
       - run: npm run ts
 
-    launches-release:
+  on-push-with-tag:
+      needs: on-push
+      name: launches-release
       runs-on: ubuntu-latest
       if: startsWith(github.ref, 'refs/tags/rc')
       env:
