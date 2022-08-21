@@ -1,4 +1,3 @@
-// import COMMITS from './test.sh'
 const fetch = require("node-fetch")
 const url = "https://api.tracker.yandex.net/v2/issues/INFRA-62"
 
@@ -9,23 +8,10 @@ let headersList = {
     "Content-Type": "application/json"
 }
 
-// async function fetchToken() {
-//     const response = await fetch(url,{
-//         method: "GET",
-//         headers: headersList
-//     })
-//     const ticket = await response.json()
-//     console.log(ticket)
-// }
-// console.log(process.env)
-
-updateTicket();
-
 async function updateTicket() {
 
     const formatter = new Intl.DateTimeFormat("ru");
     const currentDate = formatter.format(new Date())//.toLocaleDateString()
-    // console.log(AUTHOR, TAG_NAME, COMMITS)
     await fetch(url,{
         method: "PATCH",
         headers: headersList,
@@ -37,5 +23,6 @@ async function updateTicket() {
         })
     })
 }
-// console.log(fetchToken())
+
+updateTicket();
 

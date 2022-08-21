@@ -7,7 +7,6 @@ let headersList = {
     "Content-Type": "application/json"
 }
 const commentText = `Собран образ с тэгом ${TAG_NAME}`
-// console.log(commentText)
 async function addComment() {
 
     await fetch(url,{
