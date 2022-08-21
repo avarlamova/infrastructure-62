@@ -2,16 +2,16 @@
 TAGS_COUNT=$( git tag | wc -l)
 LOG="git log --pretty=format:'%H %an %s'"
 
-if [ $TAGS_COUNT -gt 1 ]
-then
+#if [ $TAGS_COUNT -gt 1 ]
+#then
 LAST_TAG=$(git describe --abbrev=0 --match 'rc-0.*' --exclude $TAG_NAME)
-  if [ $LAST_TAG != '' ]
-   then
+#  if [ $LAST_TAG != '' ]
+#   then
     LOG="$LOG $LAST_TAG..HEAD"
-    fi
-else
-    LOG="$LOG $TAG_NAME"
-fi
+#    fi
+#else
+#    LOG="$LOG $TAG_NAME"
+#fi
 
 export COMMITS=$(eval $LOG)
 echo "COMMITS<<EOF" >> $GITHUB_ENV
