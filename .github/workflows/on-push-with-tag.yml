@@ -33,7 +33,7 @@ jobs:
 #        with:
 #          fetch-depth: 0
 #        working-directory: src
-      - run: docker build src --file Dockerfile --tag $TAG_NAME
+      - run: docker build --file Dockerfile --tag $TAG_NAME .
       - run: echo "Собран образ с тэгом $TAG_NAME"
 
 
