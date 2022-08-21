@@ -10,7 +10,7 @@ LAST_TAG=$(git describe --abbrev=0 --match 'rc-0.*' --exclude $TAG_NAME)
     LOG="$LOG $LAST_TAG..HEAD"
     fi
 else
-    LOG="$LOG $TAG_NAME..HEAD"
+    LOG="$LOG $TAG_NAME"
 fi
 
 export COMMITS=$(eval $LOG)
