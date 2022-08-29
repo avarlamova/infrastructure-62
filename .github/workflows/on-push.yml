@@ -35,7 +35,7 @@ jobs:
           with:
             node-version: '16.16.0'
         - run: |
-            source ./src/test.sh
+            source ./src/getCommits.sh
         - run: npm install
         - run: echo "Обновляем тикет"
         - run: npm run launch-release
