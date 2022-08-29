@@ -41,7 +41,8 @@ jobs:
         - name: get commits
           run: |
             source ./src/getCommits.sh
-        # - run: npm install
+        - name: install dependencies
+          run: npm install
         - name: update ticket
           run: npm run launch-release
         - name: build docker image
