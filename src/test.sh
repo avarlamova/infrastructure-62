@@ -16,9 +16,9 @@ fi
 
 echo $LOG
 
-# export COMMITS=$(eval $LOG)
-# echo "COMMITS<<EOF" >> $GITHUB_ENV
-# echo "$COMMITS" >> $GITHUB_ENV
-# echo "EOF" >> $GITHUB_ENV
+export COMMITS=$(eval $LOG)
+echo "COMMITS<<EOF" >> $GITHUB_ENV
+echo "$COMMITS" >> $GITHUB_ENV
+echo "EOF" >> $GITHUB_ENV
 
 
