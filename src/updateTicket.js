@@ -1,12 +1,13 @@
 const fetch = require("node-fetch")
-const url = "https://api.tracker.yandex.net/v2/issues/INFRA-62"
 
-const { OAUTH_TOKEN,TAG_NAME, AUTHOR, COMMITS} = process.env
+const { OAUTH_TOKEN,TAG_NAME, AUTHOR, COMMITS, TICKET_ID, ORG_ID} = process.env
 let headersList = {
-    "X-Org-ID": "7261414",
+    "X-Org-ID": ORG_ID,
     "Authorization": `OAuth ${OAUTH_TOKEN}`,
     "Content-Type": "application/json"
 }
+
+const url = "https://api.tracker.yandex.net/v2/issues/"+TICKET_ID
 
 async function updateTicket() {
 
