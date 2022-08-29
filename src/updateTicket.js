@@ -7,13 +7,14 @@ let headersList = {
     "Content-Type": "application/json"
 }
 
-const url = "https://api.tracker.yandex.net/v2/issues/"+TICKET_ID
+
+const updateTicketUrl = "https://api.tracker.yandex.net/v2/issues/"+TICKET_ID
 
 async function updateTicket() {
 
     const formatter = new Intl.DateTimeFormat("ru");
     const currentDate = formatter.format(new Date())//.toLocaleDateString()
-    await fetch(url,{
+    await fetch(updateTicketUrl,{
         method: "PATCH",
         headers: headersList,
         body: JSON.stringify({
