@@ -12,9 +12,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16.16.0'
-      - run: npm install
+      - name: install dependencies
+        run: npm install
       - run: npm run lint
       - run: npm run ts
+
+
   on-push-with-tag:
       needs: on-push
       name: launches-release
