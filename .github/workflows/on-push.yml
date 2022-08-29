@@ -45,7 +45,7 @@ jobs:
 
         - name: build docker image
         - run: docker build --file Dockerfile --tag $TAG_NAME .
-        - run: echo "Собран образ с тэгом $TAG_NAME"
+        - run: echo "На порту 3000 собран образ с тэгом $TAG_NAME"
 
         - name: add comment
         - run: npm run add-release-comment
