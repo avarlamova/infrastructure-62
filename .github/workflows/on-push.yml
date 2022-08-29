@@ -28,13 +28,13 @@ jobs:
       TICKET_ID: ${{secrets.TICKET_ID}}
       ORG_ID: ${{secrets.ORG_ID}}
     steps:
-      - name: get release commits
-       uses: actions/checkout@v3
+      -uses: actions/checkout@v3
         with:
           fetch-depth: 0
-       uses: actions/setup-node@v3
+       - uses: actions/setup-node@v3
         with:
           node-version: "16.16.0"
+      -name: get commits list
        run: |
           source ./src/getCommits.sh
 
