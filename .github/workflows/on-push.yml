@@ -45,6 +45,8 @@ jobs:
 
         - name: build docker image
         - run: docker build --file Dockerfile --tag $TAG_NAME .
+
+        - name: log docker image completion
         - run: echo "На порту 3000 собран образ с тэгом $TAG_NAME"
 
         - name: add comment
