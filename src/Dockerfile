@@ -9,6 +9,9 @@
 FROM node:current-alpine
 WORKDIR /app
 COPY package*.json ./
-RUN npm install
 COPY . .
-CMD ["npm","start"]
+RUN npm ci --production
+RUN npm run build
+RUN npm install -g serve
+
+CMD ["serve","-s", "build","-l", "3000"]
