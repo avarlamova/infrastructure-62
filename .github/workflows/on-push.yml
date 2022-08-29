@@ -14,8 +14,10 @@ jobs:
           node-version: '16.16.0'
       - name: install dependencies
         run: npm install
-      - run: npm run lint
-      - run: npm run ts
+      - name: check linter
+        run: npm run lint
+      - name: check typescript 
+        run: npm run ts
 
 
   on-push-with-tag:
