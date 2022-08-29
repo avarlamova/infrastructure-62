@@ -8,7 +8,6 @@ let headersList = {
 }
 
 
-
 const updateTicketUrl = "https://api.tracker.yandex.net/v2/issues/"+TICKET_ID
 
 async function updateTicket() {
