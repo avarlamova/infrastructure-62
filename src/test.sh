@@ -14,6 +14,8 @@ else
     LOG="$LOG $TAG_NAME"
 fi
 
+echo $LOG
+
 export COMMITS=$(eval $LOG)
 echo "COMMITS<<EOF" >> $GITHUB_ENV
 echo "$COMMITS" >> $GITHUB_ENV
